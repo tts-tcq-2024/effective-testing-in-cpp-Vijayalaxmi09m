@@ -1,6 +1,6 @@
 // misaligned_test.cpp
 #include "misaligned.h"
-#include <cassert>
+#include <assert.h>
 #include <iostream>
 
 void testFormatColorEntry() {
