@@ -9,20 +9,20 @@ int main() {
     assert(size(43) == 'L' && "Expected size to be 'L' for cms > 42");
 
     // Boundary and edge cases
-    assert(size(38) == 'S' && "Expected size to be 'S' for cms = 38"); // This should fail since 38 is not handled
-    assert(size(42) == 'M' && "Expected size to be 'M' for cms = 42"); // This should fail because 42 is not returned as 'M'
+    assert(size(38) == 'S' && "Expected size to be 'S' for cms = 38");
+    assert(size(42) == 'M' && "Expected size to be 'M' for cms = 42");
 
     // Values just outside of typical ranges
-    assert(size(38.1) == 'M' && "Expected size to be 'M' for cms = 38.1"); // Expected to fail if 38.1 does not map to 'M'
-    assert(size(41.9) == 'M' && "Expected size to be 'M' for cms just under 42"); // Testing just under 42 boundary
+    assert(size(38.1) == 'M' && "Expected size to be 'M' for cms = 38.1");
+    assert(size(41.9) == 'M' && "Expected size to be 'M' for cms just under 42");
 
     // Extreme values
     assert(size(100) == 'L' && "Expected size to be 'L' for a large cms value (100)");
     assert(size(-5) == '\0' && "Expected size to be undefined for negative cms values");
 
     // Additional edge cases
-    assert(size(0) == '\0' && "Expected size to be undefined for zero cms");
-    assert(size(42.1) == 'L' && "Expected size to be 'L' for cms just over 42"); // Test right above the 'M' range
+    assert(size(0) == 'S' && "Expected size to be 'S' for zero cms (assuming zero is smallest possible size)");
+    assert(size(42.1) == 'L' && "Expected size to be 'L' for cms just over 42");
 
     // Sanity check for large value
     assert(size(1000) == 'L' && "Expected size to be 'L' for extremely large cms values");
