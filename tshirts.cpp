@@ -11,3 +11,7 @@ char size(int cms) {
     }
     return sizeName;
 }
+int main() {
+    return 0;
+}
+
