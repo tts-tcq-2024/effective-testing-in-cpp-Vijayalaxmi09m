@@ -1,7 +1,6 @@
-// tshirts.h
 #ifndef TSHIRTS_H
 #define TSHIRTS_H
 
-char size(int cms);
+char size(float cms);  // Change int to float
 
 #endif // TSHIRTS_H
