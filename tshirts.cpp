@@ -11,3 +11,7 @@ char size(float cms) {  // Change int to float
     }
     return sizeName;
 }
+
+int main() {
+    return 0;
+}
